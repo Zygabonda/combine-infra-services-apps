@@ -9,11 +9,11 @@ spec:
   project: production
   source:
     path: devops-toolkit/app
-    repoURL: https://github.com//combine-infra-services-apps
+    repoURL: https://github.com/zygabonda/combine-infra-services-apps
     targetRevision: HEAD
   destination:
     namespace: production
-    server: https://1.2.3.4
+    server: https://34.139.121.91
   syncPolicy:
     automated:
       selfHeal: true
