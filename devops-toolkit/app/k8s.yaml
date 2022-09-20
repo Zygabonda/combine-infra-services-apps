@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-toolkit
+  name: geeksessions
   labels:
-    app: devops-toolkit
+    app: geeksessions
 spec:
   selector:
     matchLabels:
-      app: devops-toolkit
+      app: geeksessions
   template:
     metadata:
       labels:
-        app: devops-toolkit
+        app: geeksessions
     spec:
       containers:
-      - name: devops-toolkit
-        image: vfarcic/devops-toolkit-series
+      - name: geeksessions
+        image: bacfelix002/geeksessions
         resources:
           limits:
             cpu: 1000m
@@ -29,16 +29,16 @@ spec:
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: devops-toolkit
+  name: geeksessions
   labels:
-    app: devops-toolkit
+    app: geeksessions
 spec:
   minReplicas: 2
   maxReplicas: 6
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: devops-toolkit
+    name: geeksessions
   metrics:
   - type: Resource
     resource:

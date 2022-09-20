@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: devops-toolkit-db
+  name: geeksessions-db
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: production
   source:
-    path: devops-toolkit/db
+    path: geeksessions/db
     repoURL: https://github.com/zygabonda/combine-infra-services-apps
     targetRevision: HEAD
   destination:
