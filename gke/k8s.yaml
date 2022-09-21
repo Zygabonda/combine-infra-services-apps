@@ -12,15 +12,15 @@ spec:
 apiVersion: container.gcp.crossplane.io/v1alpha1
 kind: NodePool
 metadata:
-  name: devops-toolkit
+  name: geeksessions
 spec:
   forProvider:
     locations:
     - us-east1-b
     - us-east1-c
-    - us-east1-d
+    #- us-east1-d
     clusterRef:
-      name: devops-toolkit
+      name: geeksessions
     initialNodeCount: 1
     config:
       preemptible: true
