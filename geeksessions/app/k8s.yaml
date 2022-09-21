@@ -49,3 +49,21 @@ spec:
         type: Utilization
         averageUtilization: 25
 
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: load-balancer
+  labels:
+    app: geeksessions
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    nodePort: 31000
+  selector:
+    app: geeksessions
+
