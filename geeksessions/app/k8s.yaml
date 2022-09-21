@@ -16,6 +16,8 @@ spec:
       containers:
       - name: geeksessions
         image: bacfelix002/geeksessions
+        ports:
+        - containerPort: 80
         resources:
           limits:
             cpu: 1000m
