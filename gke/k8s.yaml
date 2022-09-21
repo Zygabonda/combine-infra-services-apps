@@ -1,7 +1,7 @@
 apiVersion: container.gcp.crossplane.io/v1beta1
 kind: GKECluster
 metadata:
-  name: devops-toolkit
+  name: geeksessions
 spec:
   forProvider:
     location: us-east1

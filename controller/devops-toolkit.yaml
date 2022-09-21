@@ -13,7 +13,7 @@ spec:
     targetRevision: HEAD
   destination:
     namespace: production
-    server: https://34.148.247.240
+    server: https://35.231.205.77
   syncPolicy:
     automated:
       selfHeal: true
