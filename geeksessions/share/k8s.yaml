@@ -1,0 +1,7 @@
+apiVersion: azure.crossplane.io/v1alpha3
+kind: ResourceGroup
+metadata:
+ name: geeksessions-rg
+spec:
+ location: eastus2
+---
