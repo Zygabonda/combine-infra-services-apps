@@ -20,6 +20,8 @@ spec:
    properties:
      encryption:
        keySource: Microsoft.Storage
+       services: 
+         blob: true
    sku:
      name: Standard_LRS
  writeConnectionSecretToRef:
