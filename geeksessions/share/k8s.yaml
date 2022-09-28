@@ -2,14 +2,17 @@ apiVersion: azure.crossplane.io/v1alpha3
 kind: ResourceGroup
 metadata:
  name: geeksessions-rg
+ namespace: production
 spec:
  location: eastus2
 ---
 apiVersion: storage.azure.crossplane.io/v1alpha3
 kind: Account
 metadata:
- name: geeksessionsstorageaccount
+ name: geeksessionstgacc
 spec:
+ providerConfigRef: 
+  name: default
  resourceGroupName: geeksessions-rg
  storageAccountSpec:
    kind: Storage
