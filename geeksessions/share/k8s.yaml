@@ -17,6 +17,9 @@ spec:
  storageAccountSpec:
    kind: Storage
    location: eastus2
+   properties:
+     encryption:
+       keySource: Microsoft.Storage
    sku:
      name: Standard_LRS
  writeConnectionSecretToRef:
