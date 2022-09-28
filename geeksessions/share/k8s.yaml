@@ -5,3 +5,17 @@ metadata:
 spec:
  location: eastus2
 ---
+apiVersion: storage.azure.crossplane.io/v1alpha3
+kind: Account
+metadata:
+ name: geeksessionsstorageaccount
+spec:
+ resourceGroupName: geeksessions-rg
+ storageAccountSpec:
+   kind: Storage
+   location: eastus2
+   sku:
+     name: Standard_LRS
+ writeConnectionSecretToRef:
+   namespace: default
+   name: storageaccount-connection-secret
